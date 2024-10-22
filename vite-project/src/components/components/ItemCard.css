@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.card:hover {
+  cursor: pointer;
+}
+
 .card__name {
   border-radius: 8px;
   color: #00000099;

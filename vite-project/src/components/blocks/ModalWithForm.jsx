@@ -25,28 +25,30 @@ function ModalWithForm({
       // console.log("test");
     };
   }),
-    [activeModal === "add-garment" && "modal__opened", closeActiveModal];
+    [activeModal === "add-garment" && "form__modal-opened", closeActiveModal];
   return (
     <>
       <div
-        className={`modal ${activeModal === "add-garment" && "modal__opened"}`}
+        className={`form__modal ${
+          activeModal === "add-garment" && "form__modal-opened"
+        }`}
         onClick={closeActiveModal}
       >
         <div
-          className="modal__container"
+          className="form__modal-container"
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
-          <h2 className="modal__title">{titleText}</h2>
+          <h2 className="form__modal-title">{titleText}</h2>
           <button
             onClick={closeActiveModal}
             type="button"
-            className="modal__close"
+            className="form__modal-close"
           ></button>
-          <form className="modal__form" noValidate>
+          <form className="form__modal-form" noValidate>
             {children}
-            <button className="modal__submit" type="submit">
+            <button className="form__modal-submit" type="submit">
               {buttonText}
             </button>
           </form>
