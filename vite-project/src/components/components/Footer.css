@@ -1,0 +1,12 @@
+.footer {
+  padding: 85px 40px 24px;
+  font-family: Cabinet-Grotesk, Arial, Helvetica, sans-serif;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.footer__date {
+  margin-left: auto;
+}
