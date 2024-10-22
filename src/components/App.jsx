@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Header from "../blocks/Header.jsx";
-import Main from "../blocks/Main.jsx";
-import ModalWithForm from "../blocks/ModalWithForm.jsx";
-import ItemModal from "../blocks/ItemModal.jsx";
-import "../components/App.css";
+import Header from "./Header.jsx";
+import Main from "./Main.jsx";
+import ModalWithForm from "./ModalWithForm.jsx";
+import ItemModal from "./ItemModal.jsx";
+import "../blocks/App.css";
 import { getWeather, filterWeatherData } from "../utils/weatherApi.js";
 import { coordinates, APIkey } from "../utils/constants.js";
 

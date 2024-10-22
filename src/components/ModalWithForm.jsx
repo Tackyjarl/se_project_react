@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../components/ModalWithForm.css";
+import "../blocks/ModalWithForm.css";
 
 function ModalWithForm({
   children,

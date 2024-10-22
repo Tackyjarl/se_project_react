@@ -1,4 +1,4 @@
-import "../components/WeatherCard.css";
+import "../blocks/WeatherCard.css";
 import {
   defaultWeatherConditions,
   weatherConditions,
