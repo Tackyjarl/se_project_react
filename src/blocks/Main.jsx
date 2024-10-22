@@ -1,5 +1,5 @@
 import "../components/Main.css";
-import { defaultClothingItems } from "../../utils/constants";
+import { defaultClothingItems } from "../utils/constants";
 import WeatherCard from "../blocks/WeatherCard";
 import ItemCard from "../blocks/ItemCard";
 import Footer from "./Footer";

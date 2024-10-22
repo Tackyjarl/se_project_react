@@ -2,7 +2,7 @@ import "../components/WeatherCard.css";
 import {
   defaultWeatherConditions,
   weatherConditions,
-} from "../../utils/constants";
+} from "../utils/constants";
 
 function WeatherCard({ weatherData }) {
   const weatherType = weatherConditions.filter((type) => {

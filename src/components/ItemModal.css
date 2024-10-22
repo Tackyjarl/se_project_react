@@ -15,7 +15,7 @@
   transition: visibility 0.5s linear 0.5s, opacity 0.5s linear;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -25,7 +25,7 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  background-image: url(../../assets/close-x-white.svg);
+  background-image: url(../assets/close-x-white.svg);
   background-color: transparent;
   padding: 0;
   margin: 0;

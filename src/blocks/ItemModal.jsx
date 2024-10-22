@@ -1,10 +1,9 @@
-import { defaultClothingItems } from "../../utils/constants";
 import "../components/ItemModal.css";
 
-function ItemModal({ activeModal, selectedCard, closeActiveModal }) {
+function ItemModal({ selectedCard, closeActiveModal, isOpen }) {
   return (
     <div
-      className={`modal ${activeModal === "preview" && "modal__opened"}`}
+      className={`modal ${isOpen && "modal_opened"}`}
       onClick={closeActiveModal}
     >
       <div
