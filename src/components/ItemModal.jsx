@@ -15,7 +15,7 @@ function ItemModal({ selectedCard, closeActiveModal, isOpen }) {
         <button
           onClick={closeActiveModal}
           type="button"
-          className="modal__close"
+          className="modal__close modal__close-item"
         ></button>
         <img
           src={selectedCard.link}

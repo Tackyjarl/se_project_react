@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 function Main({ weatherData, handleCardClick }) {
   return (
-    <>
+    <div>
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">
@@ -29,7 +29,7 @@ function Main({ weatherData, handleCardClick }) {
         </ul>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }
 

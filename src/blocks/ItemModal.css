@@ -23,9 +23,7 @@
 
 .modal__close {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  background-image: url(../assets/close-x-white.svg);
+  background-image: url(../assets/button-x.png);
   background-color: transparent;
   padding: 0;
   margin: 0;
@@ -33,6 +31,11 @@
   width: 20px;
   opacity: 70%;
   border: none;
+}
+
+.modal__close-item {
+  top: 24px;
+  right: 24px;
 }
 
 .modal__image {
