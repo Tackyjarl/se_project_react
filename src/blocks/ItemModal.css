@@ -44,9 +44,9 @@
   border-bottom-right-radius: 0;
 }
 
-.modal__image:hover {
-  /* cursor: pointer; */
-}
+/* .modal__image:hover { */
+/* cursor: pointer; */
+/* } */
 
 .modal__content {
   position: relative;
