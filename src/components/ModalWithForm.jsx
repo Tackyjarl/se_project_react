@@ -7,6 +7,7 @@ function ModalWithForm({
   titleText,
   closeActiveModal,
   isOpen,
+  onSubmit,
 }) {
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -45,7 +46,7 @@ function ModalWithForm({
           type="button"
           className="modal__close"
         ></button>
-        <form className="modal__form" noValidate>
+        <form className="modal__form" onSubmit={onSubmit} noValidate>
           {children}
           <button className="modal__submit" type="submit">
             {buttonText}

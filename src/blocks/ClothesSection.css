@@ -1,0 +1,42 @@
+.clothes__section {
+  position: absolute;
+  right: 0px;
+  width: 75%;
+  font-family: Cabinet-Grotesk, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.clothes__section-container {
+  justify-content: start;
+  display: flex;
+}
+
+.clothes__section-text {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin: 0;
+  /* padding-bottom: 16px; */
+}
+.clothes__section-button {
+  color: #00000099;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: none;
+  border: none;
+  padding-left: 20px;
+}
+
+.clothes__section-button:hover {
+  color: #000;
+}
+.clothes__section__cards-list {
+  display: grid;
+  gap: 21px;
+  grid-template-columns: repeat(auto-fit, 323px);
+  margin: 0;
+  padding: 0;
+}

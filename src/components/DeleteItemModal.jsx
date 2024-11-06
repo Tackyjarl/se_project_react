@@ -1,12 +1,11 @@
 import { useEffect } from "react";
-import "../blocks/ItemModal.css";
+import "../blocks/DeleteItemModal.css";
 
-function ItemModal({
-  selectedCard,
+function DeleteItemModal({
+  handleDeleteCard,
   closeActiveModal,
   isOpen,
-  handleDeleteCard,
-  handleDeleteModalClick,
+  selectedCard,
 }) {
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -34,7 +33,7 @@ function ItemModal({
       onClick={closeActiveModal}
     >
       <div
-        className="modal__content"
+        className="modal__content modal__content-delete"
         onClick={(e) => {
           e.stopPropagation();
         }}
@@ -44,26 +43,27 @@ function ItemModal({
           type="button"
           className="modal__close modal__close-item"
         ></button>
-
-        <img
-          src={selectedCard.imageUrl}
-          alt={selectedCard.name}
-          className="modal__image"
-        />
-        <div className="modal__footer">
-          <button
-            type="button"
-            className="modal__delete"
-            onClick={handleDeleteModalClick}
-          >
-            Delete Item
-          </button>
-          <h2 className="modal__caption">{selectedCard.name}</h2>
-          <p className="modal__weather"> Weather: {selectedCard.weather}</p>
-        </div>
+        <p className="modal__delete-query">
+          Are you sure you want to delete this item?
+          <br /> This action is irreversible.
+        </p>
+        <button
+          type="submit"
+          onClick={handleDeleteCard}
+          className="modal__delete modal__delete-confirm"
+        >
+          Yes, delete Item
+        </button>
+        <button
+          type="button"
+          onClick={closeActiveModal}
+          className="modal__delete-cancel"
+        >
+          Cancel
+        </button>
       </div>
     </div>
   );
 }
 
-export default ItemModal;
+export default DeleteItemModal;

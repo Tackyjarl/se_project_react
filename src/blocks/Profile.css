@@ -1,0 +1,15 @@
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.profile__sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+}
+
+.profile__clothing {
+  display: flex;
+}

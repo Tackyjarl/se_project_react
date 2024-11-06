@@ -15,10 +15,14 @@ export const filterWeatherData = (data) => {
   //   console.log(data);
   const result = {};
   result.city = data.name;
-  result.temp = { F: data.main.temp };
+  result.temp = {
+    F: data.main.temp,
+    C: Math.round(((data.main.temp - 32) * 5) / 9),
+  };
+  // console.log(result.temp);
   result.type = getWeatherType(data.main.temp);
   result.condition = data.weather[0].main.toLowerCase();
-  //   console.log(result.condition);
+  // console.log(result.condition);
   result.isDay = isDay(data.sys, Date.now());
   return result;
 };
@@ -36,13 +40,3 @@ export const getWeatherType = (temperature) => {
     return "cold";
   }
 };
-
-// export const getConditionType = (id) => {
-//   if (id === 800) {
-//     return "clear";
-//   } else if (id >= 801) {
-//     return "cloudy";
-//   } else if (id >= 500 && id < 600) {
-//     return "rain";
-//   }
-// };

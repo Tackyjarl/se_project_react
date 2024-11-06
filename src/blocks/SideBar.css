@@ -1,0 +1,26 @@
+.sidebar {
+  position: absolute;
+  display: flex;
+  left: 0px;
+  width: 25%;
+  height: 56px;
+  font-family: Cabinet-Grotesk, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sidebar__container-avatar {
+  display: flex;
+}
+
+.sidebar__username {
+  display: flex;
+  align-items: center;
+
+  padding-left: 16px;
+}
+.sidebar__avatar {
+  max-width: 56px;
+  max-height: 56px;
+}

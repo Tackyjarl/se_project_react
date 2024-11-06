@@ -45,7 +45,7 @@
 }
 
 .modal__image:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .modal__content {
@@ -62,6 +62,23 @@
   border-radius: 8px;
 }
 
+.modal__delete {
+  right: 32px;
+  position: absolute;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: Cabinet-Grotesk, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ff4d00;
+  cursor: pointer;
+}
+
+.modal__delete:hover {
+  color: #ff4d0099;
+}
 .modal__caption {
   font-size: 20px;
   line-height: 1.25;
