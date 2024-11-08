@@ -61,7 +61,6 @@ function App() {
           clothingItems.filter((item) => item._id !== selectedCard._id)
         );
         setSelectedCard({});
-        setActiveModal("");
         closeActiveModal();
       })
       .catch(console.error);
@@ -94,10 +93,7 @@ function App() {
       .then((items) => {
         setClothingItems(items);
       })
-      .catch(() => {
-        console.error;
-        setClothingItems(defaultClothingItems);
-      });
+      .catch(console.error);
   }, []);
   return (
     <div className="page">
@@ -109,7 +105,6 @@ function App() {
             handleAddButtonClick={handleAddButtonClick}
             weatherData={weatherData}
             // toggleMobileMenu={toggleMobileMenu}
-            tempUnit={tempUnit}
             handleTempUnitChange={handleTempUnitChange}
           />
           <Routes>
