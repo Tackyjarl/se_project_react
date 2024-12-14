@@ -6,7 +6,14 @@ import ItemCard from "./ItemCard";
 import Footer from "./Footer";
 import { CurrentTemperatureContext } from "../contexts/CurrentTemperatureContext";
 
-function Main({ weatherData, handleCardClick, clothingItems }) {
+function Main({
+  weatherData,
+  handleCardClick,
+  clothingItems,
+  onCardLike,
+  isLoggedIn,
+  currentUser,
+}) {
   const { tempUnit } = React.useContext(CurrentTemperatureContext);
   return (
     <div>
@@ -27,6 +34,8 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
                   key={item._id}
                   item={item}
                   onCardClick={handleCardClick}
+                  onCardLike={onCardLike}
+                  isLoggedIn={isLoggedIn}
                 />
               );
             })}

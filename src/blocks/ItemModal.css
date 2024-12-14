@@ -79,6 +79,15 @@
 .modal__delete:hover {
   color: #ff4d0099;
 }
+
+.modal__delete_hidden {
+  visibility: hidden;
+}
+
+.modal__delete_visible {
+  visibility: visible;
+}
+
 .modal__caption {
   font-size: 20px;
   line-height: 1.25;

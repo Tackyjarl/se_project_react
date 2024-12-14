@@ -22,7 +22,7 @@
   padding: 2px 12px;
   width: 73px;
   height: 24px;
-  position: absolute;
+  /* position: absolute; */
   background-color: #fff;
   top: 15px;
   left: 125px;
@@ -33,4 +33,39 @@
 .card__image {
   width: 100%;
   border-radius: 8px;
+}
+
+.card__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.card__like-button {
+  display: flex;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.card__like-button:hover {
+  opacity: 70%;
+}
+
+.card__like-button_active {
+  background-image: url("../assets/CardLikeTrue.svg");
+}
+
+.card__like-button_inactive {
+  /* background-color: red; */
+  background-image: url("../assets/CardLikeFalse.svg");
 }

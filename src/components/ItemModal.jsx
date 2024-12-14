@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "../blocks/ItemModal.css";
+import CurrentUserContext from "../contexts/CurrentUserContext";
 
 function ItemModal({
   selectedCard,
@@ -8,6 +9,14 @@ function ItemModal({
   handleDeleteCard,
   handleDeleteModalClick,
 }) {
+  const currentUser = useContext(CurrentUserContext);
+
+  const isOwn = selectedCard?.owner === currentUser?._id;
+
+  const itemDeleteButtonClassName = `modal__delete modal__delete_visible ${
+    isOwn ? "" : "modal__delete_hidden"
+  }`;
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -51,13 +60,16 @@ function ItemModal({
           className="modal__image"
         />
         <div className="modal__footer">
-          <button
-            type="button"
-            className="modal__delete"
-            onClick={handleDeleteModalClick}
-          >
-            Delete Item
-          </button>
+          {isOwn && (
+            <button
+              type="button"
+              className={itemDeleteButtonClassName}
+              onClick={handleDeleteModalClick}
+            >
+              Delete Item
+            </button>
+          )}
+
           <h2 className="modal__caption">{selectedCard.name}</h2>
           <p className="modal__weather"> Weather: {selectedCard.weather}</p>
         </div>

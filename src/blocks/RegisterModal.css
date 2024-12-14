@@ -1,0 +1,18 @@
+.modal__login {
+  position: relative;
+  margin: 0;
+  width: 100px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  color: #0000004d;
+  background-color: transparent;
+  cursor: pointer;
+  top: 36px;
+  left: 130px;
+  font-size: 16px;
+}
+
+.modal__login:hover {
+  color: #000000;
+}

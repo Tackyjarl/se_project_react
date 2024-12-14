@@ -46,13 +46,36 @@
   opacity: 50%;
 }
 
-.header__button-clothes::before {
-  content: "+ Add Clothes";
-}
-
 .header__avatar {
+  position: relative;
   max-width: 40px;
   max-height: 40px;
+  border-radius: 50%;
+}
+
+.header__placeholder {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  top: 30px;
+  background-color: #00000033;
+  border-radius: 50%;
+  border: solid 1px;
+  border-color: #00000080;
+}
+
+.header__avatar_visible {
+  visibility: visible;
+}
+
+.header__avatar_hidden {
+  visibility: hidden;
 }
 
 /* @media screen and (max-width: 768px) {
