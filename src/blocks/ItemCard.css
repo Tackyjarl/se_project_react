@@ -3,6 +3,7 @@
   position: relative;
   font-family: Cabinet-Grotesk, Arial, Helvetica, sans-serif;
   width: 323px;
+  height: 323px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -55,6 +56,7 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  background-color: transparent;
 }
 
 .card__like-button:hover {

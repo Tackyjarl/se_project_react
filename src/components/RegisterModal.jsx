@@ -6,7 +6,7 @@ const RegisterModal = ({
   isOpen,
   closeActiveModal,
   handleRegistration,
-  handleLogInButtonClick,
+  handleLoginButtonClick,
 }) => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -92,7 +92,7 @@ const RegisterModal = ({
       <button
         className="modal__login"
         type="button"
-        onClick={handleLogInButtonClick}
+        onClick={handleLoginButtonClick}
       >
         or Log In
       </button>

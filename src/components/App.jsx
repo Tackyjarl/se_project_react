@@ -97,7 +97,8 @@ function App() {
   };
 
   const handleDeleteCard = () => {
-    deleteItems(selectedCard._id)
+    const token = getToken();
+    deleteItems(selectedCard._id, token)
       .then(() => {
         setClothingItems(
           clothingItems.filter((item) => item._id !== selectedCard._id)

@@ -39,6 +39,8 @@
 }
 
 .modal__image {
+  width: 498px;
+  height: 498px;
   border-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
