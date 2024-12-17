@@ -1,6 +1,6 @@
 //modules
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, request } from "react";
 import { Routes, Route } from "react-router-dom";
 
 //utils
@@ -59,7 +59,6 @@ function App() {
     name: "",
     avatar: "",
   });
-  const [isLoading, setIsLoading] = useState(false);
   const [isLoggedInLoading, setIsLoggedInLoading] = useState(true);
 
   const handleCardClick = (card) => {
@@ -87,6 +86,10 @@ function App() {
     setActiveModal("edit-profile");
   };
 
+  const closeActiveModal = () => {
+    setActiveModal("");
+  };
+
   const handleAddItem = (item) => {
     return addNewItems(item)
       .then((newItem) => {
@@ -107,10 +110,6 @@ function App() {
         closeActiveModal();
       })
       .catch(console.error);
-  };
-
-  const closeActiveModal = () => {
-    setActiveModal("");
   };
 
   const handleTempUnitChange = () => {
@@ -178,7 +177,7 @@ function App() {
 
   const handleLogin = ({ email, password }) => {
     if (!email || !password) {
-      console.log("not testing");
+      // console.log("not testing");
       return;
     }
     auth
@@ -189,13 +188,14 @@ function App() {
           // setCurrentUser(data.token);
           getUserData(data.token);
           setIsLoggedIn(true);
-          closeActiveModal();
           setIsLoggedInLoading(false);
+          closeActiveModal();
           // console.log("testing");
         }
       })
-      .catch(console.error)
-      .finally(setIsLoggedInLoading(false));
+      .finally(() => {
+        setIsLoggedInLoading();
+      });
   };
 
   const handleLogOut = () => {
@@ -203,7 +203,6 @@ function App() {
       removeToken();
       setIsLoggedIn(false);
       setCurrentUser({});
-      closeActiveModal();
     } else {
       console.error(error);
     }
@@ -262,7 +261,7 @@ function App() {
   }, []);
 
   return (
-    <CurrentUserContext.Provider value={currentUser} isLoggedIn={isLoggedIn}>
+    <CurrentUserContext.Provider value={currentUser}>
       <div className="page">
         <CurrentTemperatureContext.Provider
           value={{ tempUnit, handleTempUnitChange }}
@@ -339,6 +338,7 @@ function App() {
             isOpen={activeModal === "login"}
             handleSignUpButtonClick={handleSignUpButtonClick}
             handleLogin={handleLogin}
+
             // handleRegistration={handleRegistration}
           />
           <EditProfileModal

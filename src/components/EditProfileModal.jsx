@@ -27,8 +27,8 @@ const EditProfileModal = ({
   const handleSubmit = (evt) => {
     evt.preventDefault();
     handleEditProfile({ name, avatar });
-    console.log("testing");
-    console.log(name);
+    // console.log("testing");
+    // console.log(name);
   };
   return (
     <ModalWithForm

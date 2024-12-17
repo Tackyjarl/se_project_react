@@ -16,7 +16,7 @@ function Main({
 }) {
   const { tempUnit } = React.useContext(CurrentTemperatureContext);
   return (
-    <div>
+    <main>
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <p className="cards__text">
@@ -42,7 +42,7 @@ function Main({
         </ul>
       </section>
       <Footer />
-    </div>
+    </main>
   );
 }
 
