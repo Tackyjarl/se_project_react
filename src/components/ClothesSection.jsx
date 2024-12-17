@@ -7,6 +7,8 @@ function ClothesSection({
   clothingItems,
   handleCardClick,
   handleAddButtonClick,
+  isLoggedIn,
+  onCardLike,
 }) {
   const currentUser = useContext(CurrentUserContext);
   const userClothing = clothingItems.filter(
@@ -31,6 +33,8 @@ function ClothesSection({
               key={item._id}
               item={item}
               onCardClick={handleCardClick}
+              onCardLike={onCardLike}
+              isLoggedIn={isLoggedIn}
             />
           );
         })}

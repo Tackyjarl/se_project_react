@@ -185,16 +185,14 @@ function App() {
       .then((data) => {
         if (data.token) {
           setToken(data.token);
-          // setCurrentUser(data.token);
           getUserData(data.token);
           setIsLoggedIn(true);
-          setIsLoggedInLoading(false);
           closeActiveModal();
           // console.log("testing");
         }
       })
       .finally(() => {
-        setIsLoggedInLoading();
+        setIsLoggedInLoading(false);
       });
   };
 
@@ -304,6 +302,8 @@ function App() {
                       handleEditProfileButtonClick={
                         handleEditProfileButtonClick
                       }
+                      isLoggedIn={isLoggedIn}
+                      onCardLike={handleCardLike}
                     />
                   </ProtectedRoute>
                 }
@@ -338,8 +338,6 @@ function App() {
             isOpen={activeModal === "login"}
             handleSignUpButtonClick={handleSignUpButtonClick}
             handleLogin={handleLogin}
-
-            // handleRegistration={handleRegistration}
           />
           <EditProfileModal
             handleEditProfile={handleEditProfile}
