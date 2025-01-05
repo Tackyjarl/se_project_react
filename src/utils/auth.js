@@ -1,4 +1,7 @@
-export const BASE__URL = "http://localhost:3001";
+const BASE__URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.tackyjarl.crabdance.com"
+    : "http://localhost:3001";
 import { checkResponse } from "./api";
 
 export const register = (name, password, email, avatar) => {
